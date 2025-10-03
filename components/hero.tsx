@@ -59,18 +59,7 @@ export function Hero() {
                   sizes="(min-width:1280px) 480px, (min-width:768px) 45vw, 85vw"
                   priority
                 />
-                <span className="image-accent" />
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="image-tile h-32 sm:h-36 lg:h-40">
-                  <Image
-                    src="https://images.unsplash.com/photo-1521510895919-46920266ddb4?auto=format&fit=crop&w=900&q=80"
-                    alt="Warm counseling office with natural light"
-                    fill
-                    className="object-cover"
-                    sizes="(min-width:1280px) 220px, (min-width:768px) 22vw, 40vw"
-                  />
-                  <span className="image-accent" />
+               
                 </div>
                 <div className="image-tile h-32 sm:h-36 lg:h-40">
                   <Image
