@@ -37,7 +37,7 @@ export function Hero() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
                 {/* Primary button: black text stays */}
-                <Button size="lg" onClick={scrollToReferral} className="px-8 py-6 text-lg text-black bg-white">
+                <Button size="lg" onClick={scrollToReferral} className="px-8 py-6 text-lg text-white bg-white">
                   Make a Referral
                 </Button>
                 {/* Outline button: white text */}
