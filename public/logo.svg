@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">WholeMind Behavioral Health Logo</title>
+  <desc id="desc">Stylized human profile with a blooming mind to represent holistic behavioral health and wellness.</desc>
+  <defs>
+    <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4c44" />
+      <stop offset="100%" stop-color="#39a78e" />
+    </linearGradient>
+    <linearGradient id="mindGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fefaef" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#d9ebe5" stop-opacity="0.85" />
+    </linearGradient>
+    <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b5c8c1" />
+      <stop offset="100%" stop-color="#eef4f1" />
+    </linearGradient>
+  </defs>
+  <circle cx="120" cy="120" r="108" fill="url(#circleGradient)" />
+  <path d="M120 52c-33.27 0-60.24 26.97-60.24 60.24 0 21.63 11.52 41.39 30.16 52.2l.38 27.56c0 6.17 5 11.17 11.17 11.17h29.06c6.17 0 11.17-5 11.17-11.17l.34-25.06c24.47-9.28 40.3-33.04 40.3-59.7C182.34 79.05 153.95 52 120 52Z" fill="url(#mindGradient)" />
+  <path d="M135.62 86.4c-8.52.06-16.5 4.36-21.14 11.48-3.22 4.9-4.7 10.5-4.2 16.2-7.66 2.58-14.12 8.24-17.4 15.6-5.48 12.3-.64 27.02 11.14 33.86 7.7 4.42 17.08 4.57 24.94.4 4.52-2.41 8.06-6.35 10.16-11 2.17 4.56 6.06 8.14 10.88 9.92 10.14 3.74 21.44-1.42 25.44-11.6 3.12-7.88 1.06-16.84-4.98-22.8-1.48-1.45-3.14-2.67-4.92-3.63 2.26-5.14 2.66-11 1.04-16.45-3.22-10.75-13.28-18.06-24.36-17.98Z" fill="#1d4c44" opacity="0.28" />
+  <path d="M187.6 139.7c-17.04 2.88-32.67 13.86-42.6 29.57-7.48 11.73-11.52 25.34-11.52 39.2 0 1.58.08 3.14.22 4.68 23.7-9.23 43.23-26.63 53.9-48.82 4.4-8.98 2.2-19.87-4-24.63Z" fill="url(#leafGradient)" />
+  <path d="M84.36 179.06c-14.28-8.1-25.32-20.62-31.32-35.48-1.78-4.44-7.8-5.2-10.8-1.36-4.4 5.5-7.52 11.92-8.96 19.1-4.42 21.94 7.82 44.52 29.06 52.16 21.6 7.78 45.5-.72 58.06-20.16-14.24-1.96-27.96-6.52-35.04-14.26Z" fill="#eef4f1" opacity="0.75" />
+</svg>
