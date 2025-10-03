@@ -192,8 +192,11 @@
   }
 
   .section-cover > * {
-    position: relative;
     z-index: 1;
+  }
+
+  .section-cover > *:not(.absolute) {
+    position: relative;
   }
 
   .frosted-panel {
