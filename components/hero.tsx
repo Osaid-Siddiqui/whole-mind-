@@ -13,29 +13,34 @@ export function Hero() {
   }
 
   return (
-    <section id="home" className="section-cover section-home min-h-screen flex items-center justify-center relative py-24 pt-28">
+    <section
+      id="home"
+      className="section-cover section-home min-h-screen flex items-center justify-center relative py-24 pt-28 bg-black"
+    >
       <div className="container mx-auto px-4">
-        <div className="frosted-panel rounded-3xl px-6 py-12 md:px-12 lg:px-16">
+        <div className="rounded-3xl px-6 py-12 md:px-12 lg:px-16">
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
             <div className="space-y-8 text-center lg:text-left">
-              <div className="inline-flex items-center justify-center lg:justify-start gap-3 rounded-full bg-primary/10 px-6 py-3 text-sm font-semibold text-primary uppercase tracking-wider">
+              <div className="inline-flex items-center justify-center lg:justify-start gap-3 rounded-full bg-primary/20 px-6 py-3 text-sm font-semibold text-white uppercase tracking-wider">
                 Holistic Behavioral Health
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-primary leading-tight text-balance">
+              <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight text-balance">
                 Healing the Mind
                 <br />
                 Nourishing the Soul
                 <br />
                 Restoring Wholeness
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 text-pretty">
+              <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto lg:mx-0 text-pretty">
                 Compassionate, faith-based behavioral health care that integrates holistic wellness and nutritional
                 psychiatry
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-                <Button size="lg" onClick={scrollToReferral} className="px-8 py-6 text-lg">
+                {/* Primary button: black text stays */}
+                <Button size="lg" onClick={scrollToReferral} className="px-8 py-6 text-lg text-black bg-white">
                   Make a Referral
                 </Button>
+                {/* Outline button: white text */}
                 <Button
                   size="lg"
                   variant="outline"
@@ -43,7 +48,7 @@ export function Hero() {
                     const element = document.querySelector("#about")
                     if (element) element.scrollIntoView({ behavior: "smooth" })
                   }}
-                  className="border-primary text-primary"
+                  className="border-white text-white hover:bg-white/10"
                 >
                   Learn More
                 </Button>
@@ -56,7 +61,7 @@ export function Hero() {
                 src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80"
                 alt="Therapist guiding a mindful breathing exercise"
                 fill
-                className="object-cover"
+                className="object-cover rounded-2xl"
                 sizes="(min-width:1280px) 480px, (min-width:768px) 45vw, 85vw"
                 priority
               />
@@ -67,7 +72,7 @@ export function Hero() {
 
       {/* Animated down arrow */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
-        <ArrowDown className="text-primary" size={32} />
+        <ArrowDown className="text-white" size={32} />
       </div>
     </section>
   )
