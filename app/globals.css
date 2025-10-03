@@ -200,12 +200,14 @@
   }
 
   .frosted-panel {
-    background: rgba(254, 250, 239, 0.85);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(181, 200, 193, 0.35);
-    box-shadow: 0 25px 60px rgba(29, 76, 68, 0.18);
-  }
+  background: rgba(254, 250, 239, 0.75); /* slightly lighter transparency */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(181, 200, 193, 0.25); /* softer border */
+  border-radius: 1.5rem; /* rounded-3xl match */
+  box-shadow: 0 12px 40px rgba(29, 76, 68, 0.15); /* lighter, diffused shadow */
+}
+
 
   .image-tile {
     position: relative;
