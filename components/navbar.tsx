@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
@@ -40,17 +39,28 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass shadow-lg" : "bg-transparent"
+      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 max-w-7xl w-[95%] ${
+        isScrolled ? "frosted-panel" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-28">
-          <a href="#home" onClick={(e) => handleNavClick(e, "#home")} className="flex items-center">
-            <Image src="/logo.png" alt="WholeMind Behavioral Health Logo" width={140} height={140} className="h-24 w-auto drop-shadow-lg" />
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-24">
+          {/* Logo */}
+          <a
+            href="#home"
+            onClick={(e) => handleNavClick(e, "#home")}
+            className="flex items-center"
+          >
+            <Image
+              src="/logo.png"
+              alt="WholeMind Behavioral Health Logo"
+              width={140}
+              height={140}
+              className="h-20 w-auto drop-shadow-lg"
+            />
           </a>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -64,7 +74,7 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <button
             className="md:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -74,7 +84,7 @@ export function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Nav */}
         {isMobileMenuOpen && (
           <div className="md:hidden pb-4">
             <div className="flex flex-col gap-4">
