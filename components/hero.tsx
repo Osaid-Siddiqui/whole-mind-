@@ -49,33 +49,23 @@ export function Hero() {
                 </Button>
               </div>
             </div>
-            <div className="grid gap-4 lg:gap-6">
-              <div className="image-tile h-64 sm:h-72 lg:h-80">
-                <Image
-                  src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80"
-                  alt="Therapist guiding a mindful breathing exercise"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width:1280px) 480px, (min-width:768px) 45vw, 85vw"
-                  priority
-                />
-               
-                </div>
-                <div className="image-tile h-32 sm:h-36 lg:h-40">
-                  <Image
-                    src="https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea?auto=format&fit=crop&w=900&q=80"
-                    alt="Faith-integrated therapy session"
-                    fill
-                    className="object-cover"
-                    sizes="(min-width:1280px) 220px, (min-width:768px) 22vw, 40vw"
-                  />
-                  <span className="image-accent" />
-                </div>
-              </div>
+
+            {/* Remaining image block */}
+            <div className="image-tile h-64 sm:h-72 lg:h-80">
+              <Image
+                src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80"
+                alt="Therapist guiding a mindful breathing exercise"
+                fill
+                className="object-cover"
+                sizes="(min-width:1280px) 480px, (min-width:768px) 45vw, 85vw"
+                priority
+              />
             </div>
           </div>
         </div>
       </div>
+
+      {/* Animated down arrow */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
         <ArrowDown className="text-primary" size={32} />
       </div>
