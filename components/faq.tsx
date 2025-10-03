@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 const faqs = [
@@ -55,25 +56,49 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-24 bg-gradient-to-b from-primary/5 to-transparent">
+    <section id="faq" className="section-cover section-faq py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="frosted-panel rounded-3xl px-6 py-10 md:px-12 text-center max-w-4xl mx-auto mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Frequently Asked Questions</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Find answers to common questions about our services
           </p>
         </div>
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="glass rounded-lg px-6 border-border/50">
-                <AccordionTrigger className="text-left text-lg font-semibold text-primary hover:no-underline">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-foreground/90 leading-relaxed">{faq.answer}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] items-start max-w-6xl mx-auto">
+          <div className="grid gap-4">
+            <div className="image-tile h-80">
+              <Image
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80"
+                alt="WholeMind team member answering client questions"
+                fill
+                className="object-cover"
+                sizes="(min-width:1280px) 420px, (min-width:768px) 45vw, 90vw"
+              />
+              <span className="image-accent" />
+            </div>
+            <div className="image-tile h-40">
+              <Image
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+                alt="Collaborative approach to behavioral health care"
+                fill
+                className="object-cover"
+                sizes="(min-width:1280px) 320px, (min-width:768px) 40vw, 90vw"
+              />
+              <span className="image-accent" />
+            </div>
+          </div>
+          <div className="frosted-panel rounded-3xl p-6 md:p-8">
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="frosted-panel rounded-xl px-6 py-4 border-border/40">
+                  <AccordionTrigger className="text-left text-lg font-semibold text-primary hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-foreground/90 leading-relaxed">{faq.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </div>
     </section>
