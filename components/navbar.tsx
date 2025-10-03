@@ -47,7 +47,7 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-28">
           <a href="#home" onClick={(e) => handleNavClick(e, "#home")} className="flex items-center">
-            <Image src="/logo.svg" alt="WholeMind Behavioral Health Logo" width={140} height={140} className="h-24 w-auto drop-shadow-lg" />
+            <Image src="/logo.png" alt="WholeMind Behavioral Health Logo" width={140} height={140} className="h-24 w-auto drop-shadow-lg" />
           </a>
 
           {/* Desktop Navigation */}
