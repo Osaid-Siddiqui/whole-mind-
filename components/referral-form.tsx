@@ -2,6 +2,7 @@
 
 import type React from "react"
 
+import Image from "next/image"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -54,16 +55,38 @@ export function ReferralForm() {
   }
 
   return (
-    <section id="referral" className="py-24">
+    <section id="referral" className="section-cover section-referral py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="frosted-panel rounded-3xl px-6 py-10 md:px-12 text-center max-w-4xl mx-auto mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Make a Referral</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Start your journey to wholeness today
           </p>
         </div>
-        <div className="max-w-3xl mx-auto">
-          <Card className="glass border-border/50">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] items-start max-w-6xl mx-auto">
+          <div className="space-y-4">
+            <div className="image-tile h-80">
+              <Image
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400&q=80"
+                alt="Clinician welcoming a new client to WholeMind"
+                fill
+                className="object-cover"
+                sizes="(min-width:1280px) 420px, (min-width:768px) 45vw, 90vw"
+              />
+              <span className="image-accent" />
+            </div>
+            <div className="image-tile h-40">
+              <Image
+                src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80"
+                alt="Healthy lifestyle tools supporting recovery"
+                fill
+                className="object-cover"
+                sizes="(min-width:1280px) 320px, (min-width:768px) 40vw, 90vw"
+              />
+              <span className="image-accent" />
+            </div>
+          </div>
+          <Card className="frosted-panel border-border/50">
             <CardHeader>
               <CardTitle className="text-2xl text-primary">Referral Form</CardTitle>
               <CardDescription>Complete this form to refer yourself or a patient to our practice</CardDescription>
