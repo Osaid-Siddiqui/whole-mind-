@@ -16,7 +16,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
-            <Image src="/logo.png" alt="WholeMind Logo" width={60} height={60} className="mb-4" />
+            <Image src="/logo.svg" alt="WholeMind Behavioral Health Logo" width={140} height={140} className="mb-4 h-24 w-auto" />
             <p className="text-sm leading-relaxed opacity-90">
               Healing the Mind • Nourishing the Soul • Restoring Wholeness
             </p>
