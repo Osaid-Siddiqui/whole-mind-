@@ -86,7 +86,7 @@ export function ReferralForm() {
               <span className="image-accent" />
             </div>
           </div>
-          <Card className="frosted-panel border-border/50">
+         <Card className="frosted-panel border-border/50 bg-black/40">
             <CardHeader>
               <CardTitle className="text-2xl text-primary">Referral Form</CardTitle>
               <CardDescription>Complete this form to refer yourself or a patient to our practice</CardDescription>
