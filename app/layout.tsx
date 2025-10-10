@@ -9,7 +9,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "WholeMind Behavioral Health & Wellness",
   description: "Healing the Mind • Nourishing the Soul • Restoring Wholeness",
-  generator: "v0.app",
+  generator: "the linkage digital",
 }
 
 export default function RootLayout({

@@ -21,9 +21,12 @@ export function Hero() {
         <div className="rounded-3xl px-6 py-12 md:px-12 lg:px-16">
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
             <div className="space-y-8 text-center lg:text-left">
+              {/* Brand Essence Badge */}
               <div className="inline-flex items-center justify-center lg:justify-start gap-3 rounded-full bg-primary/20 px-6 py-3 text-sm font-semibold text-white uppercase tracking-wider">
-                Holistic Behavioral Health
+                WholeMind Behavioral Health & Wellness
               </div>
+
+              {/* Headline with Tagline */}
               <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight text-balance">
                 Healing the Mind
                 <br />
@@ -31,16 +34,18 @@ export function Hero() {
                 <br />
                 Restoring Wholeness
               </h1>
+
+              {/* Supporting Mission Statement */}
               <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto lg:mx-0 text-pretty">
-                Compassionate, faith-based behavioral health care that integrates holistic wellness and nutritional
-                psychiatry
+                Compassionate, evidence-based, and integrative behavioral health care addressing the whole person—mind,
+                body, and spirit. We empower individuals to achieve lasting wellness and emotional balance.
               </p>
+
+              {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-                {/* Primary button: black text stays */}
                 <Button size="lg" onClick={scrollToReferral} className="px-8 py-6 text-lg text-white bg-white">
                   Make a Referral
                 </Button>
-                {/* Outline button: white text */}
                 <Button
                   size="lg"
                   variant="outline"
@@ -55,7 +60,7 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Remaining image block */}
+            {/* Hero Image */}
             <div className="image-tile h-64 sm:h-72 lg:h-80">
               <Image
                 src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80"

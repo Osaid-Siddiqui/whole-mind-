@@ -5,41 +5,53 @@ export function About() {
     <section id="about" className="section-cover section-about py-24">
       <div className="container mx-auto px-4">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
+          {/* Text Panel */}
           <div className="frosted-panel rounded-3xl p-8 md:p-12 space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary text-center lg:text-left mb-4">About Us</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary text-center lg:text-left mb-4">
+              About Us
+            </h2>
             <div className="space-y-6 text-lg leading-relaxed text-foreground/90">
               <p className="text-pretty">
-                At <strong>WholeMind Behavioral Health & Wellness</strong>, we believe that true healing encompasses the
-                mind, body, and spirit. Our mission is to provide compassionate, comprehensive care that addresses the
-                whole person.
+                At <strong>WholeMind Behavioral Health & Wellness</strong>, we believe that true healing begins when the
+                mind, body, and spirit are nurtured together. Founded by Esther Amune, MSN, APRN, PMHNP-BC, our practice
+                offers compassionate, integrative care that restores balance, builds resilience, and empowers individuals
+                to thrive.
               </p>
               <p className="text-pretty">
-                We integrate evidence-based therapeutic approaches with faith-based principles and nutritional
-                psychiatry to create personalized treatment plans that honor your unique journey toward wellness.
+                Our mission is to provide compassionate, evidence-based, and integrative behavioral health services that
+                address the whole person—mind, body, and spirit—helping clients achieve lasting wellness and emotional
+                balance.
               </p>
               <p className="text-pretty">
-                Our holistic approach recognizes that mental health is deeply connected to physical health, spiritual
-                well-being, and lifestyle choices. We partner with you to restore balance, build resilience, and
-                cultivate lasting wholeness.
+                We combine evidence-based care with holistic, nutritional, and faith-informed practices to create
+                personalized treatment plans that honor your unique journey toward wellness and emotional wholeness.
               </p>
             </div>
+
+            {/* Core Values / Focus Areas */}
             <div className="grid md:grid-cols-3 gap-6 pt-6">
               <div className="text-center p-6 glass-dark rounded-xl">
-                <h3 className="font-bold text-xl text-primary mb-2">Faith-Based</h3>
+                <h3 className="font-bold text-xl text-primary mb-2">Wholeness</h3>
                 <p className="text-sm text-muted-foreground">
-                  Integrating spiritual principles with clinical excellence
+                  Treating the mind, body, and soul as interconnected parts of a greater whole
                 </p>
               </div>
               <div className="text-center p-6 glass-dark rounded-xl">
-                <h3 className="font-bold text-xl text-primary mb-2">Holistic</h3>
-                <p className="text-sm text-muted-foreground">Treating the whole person—mind, body, and spirit</p>
+                <h3 className="font-bold text-xl text-primary mb-2">Compassion</h3>
+                <p className="text-sm text-muted-foreground">
+                  Providing care grounded in empathy, dignity, and respect
+                </p>
               </div>
               <div className="text-center p-6 glass-dark rounded-xl">
-                <h3 className="font-bold text-xl text-primary mb-2">Nutritional</h3>
-                <p className="text-sm text-muted-foreground">Leveraging nutrition to support mental wellness</p>
+                <h3 className="font-bold text-xl text-primary mb-2">Evidence-Based</h3>
+                <p className="text-sm text-muted-foreground">
+                  Integrating science, research, and clinical expertise with holistic healing
+                </p>
               </div>
             </div>
           </div>
+
+          {/* Image Panel */}
           <div className="grid gap-4 md:grid-cols-2">
             <div className="image-tile h-64 md:h-full">
               <Image
