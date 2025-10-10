@@ -87,7 +87,7 @@ export function ReferralForm() {
             </div>
           </div>
 
-          {/* Updated Card */}
+          {/* Updated Card with frosted and readable text */}
           <Card className="frosted-panel border-border/50 bg-black/40 backdrop-blur-md">
             <CardHeader>
               <CardTitle className="text-2xl text-white">Referral Form</CardTitle>
@@ -97,13 +97,14 @@ export function ReferralForm() {
             </CardHeader>
 
             <CardContent>
-              <div className="text-white"> {/* Make all text readable */}
+              <div className="text-white"> {/* Ensures all text inside is readable */}
                 <Tabs defaultValue="patient" className="w-full">
                   <TabsList className="grid w-full grid-cols-2 mb-8">
                     <TabsTrigger value="patient">Patient Self-Referral</TabsTrigger>
                     <TabsTrigger value="provider">Provider Referral</TabsTrigger>
                   </TabsList>
 
+                  {/* Patient Self-Referral Tab */}
                   <TabsContent value="patient">
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <input type="hidden" name="referralType" value="patient" />
@@ -213,7 +214,161 @@ export function ReferralForm() {
                     </form>
                   </TabsContent>
 
-                  {/* Provider Tab content can be updated similarly */}
+                  {/* Provider Referral Tab */}
+                  <TabsContent value="provider">
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <input type="hidden" name="referralType" value="provider" />
+                      <div className="space-y-4 mb-6 p-4 bg-black/20 rounded-lg">
+                        <h3 className="font-semibold text-white">Provider Information</h3>
+                        <div className="grid md:grid-cols-2 gap-4">
+                          <div className="space-y-2">
+                            <Label htmlFor="providerName">Provider Name *</Label>
+                            <Input
+                              id="providerName"
+                              name="providerName"
+                              required
+                              className="text-white placeholder-gray-300 bg-black/20"
+                            />
+                          </div>
+                          <div className="space-y-2">
+                            <Label htmlFor="providerPhone">Provider Phone *</Label>
+                            <Input
+                              id="providerPhone"
+                              name="providerPhone"
+                              type="tel"
+                              required
+                              className="text-white placeholder-gray-300 bg-black/20"
+                            />
+                          </div>
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="providerEmail">Provider Email *</Label>
+                          <Input
+                            id="providerEmail"
+                            name="providerEmail"
+                            type="email"
+                            required
+                            className="text-white placeholder-gray-300 bg-black/20"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="practice">Practice/Organization</Label>
+                          <Input
+                            id="practice"
+                            name="practice"
+                            className="text-white placeholder-gray-300 bg-black/20"
+                          />
+                        </div>
+                      </div>
+
+                      <h3 className="font-semibold text-white">Patient Information</h3>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="patientFirstName">Patient First Name *</Label>
+                          <Input
+                            id="patientFirstName"
+                            name="patientFirstName"
+                            required
+                            className="text-white placeholder-gray-300 bg-black/20"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="patientLastName">Patient Last Name *</Label>
+                          <Input
+                            id="patientLastName"
+                            name="patientLastName"
+                            required
+                            className="text-white placeholder-gray-300 bg-black/20"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="patientEmail">Patient Email</Label>
+                        <Input
+                          id="patientEmail"
+                          name="patientEmail"
+                          type="email"
+                          className="text-white placeholder-gray-300 bg-black/20"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="patientPhone">Patient Phone *</Label>
+                        <Input
+                          id="patientPhone"
+                          name="patientPhone"
+                          type="tel"
+                          required
+                          className="text-white placeholder-gray-300 bg-black/20"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="patientDob">Patient Date of Birth *</Label>
+                        <Input
+                          id="patientDob"
+                          name="patientDob"
+                          type="date"
+                          required
+                          className="text-white placeholder-gray-300 bg-black/20"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="diagnosis">Diagnosis/Presenting Concerns *</Label>
+                        <Textarea
+                          id="diagnosis"
+                          name="diagnosis"
+                          rows={4}
+                          placeholder="Please provide relevant diagnoses and clinical information..."
+                          required
+                          className="text-white placeholder-gray-300 bg-black/20"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="urgency">Urgency Level</Label>
+                        <select
+                          id="urgency"
+                          name="urgency"
+                          className="w-full px-3 py-2 border border-input rounded-md bg-black/20 text-white placeholder-gray-300"
+                        >
+                          <option value="routine">Routine</option>
+                          <option value="urgent">Urgent (within 1 week)</option>
+                          <option value="emergency">Emergency (immediate attention)</option>
+                        </select>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <Checkbox
+                          id="providerConsent"
+                          checked={consent}
+                          onCheckedChange={(checked) => setConsent(checked as boolean)}
+                          required
+                        />
+                        <Label htmlFor="providerConsent" className="text-sm leading-relaxed cursor-pointer">
+                          I confirm that I have obtained appropriate consent from the patient to make this referral and
+                          share their information with WholeMind Behavioral Health & Wellness.
+                        </Label>
+                      </div>
+
+                      <Button
+                        type="submit"
+                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                        disabled={isSubmitting || !consent}
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            Submitting...
+                          </>
+                        ) : (
+                          "Submit Referral"
+                        )}
+                      </Button>
+                    </form>
+                  </TabsContent>
                 </Tabs>
               </div>
             </CardContent>
